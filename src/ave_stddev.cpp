@@ -14,7 +14,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>. *
 ************************************************************************/
 
-#define _SCL_SECURE_NO_WARNINGS
 #include <iostream>
 #include <fstream>
 #include <string>

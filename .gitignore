@@ -195,4 +195,6 @@ cnaf.debug.gnu
 cnaf.gnu
 cnaf.intel
 
+.vs/
+*.VC.db
 
