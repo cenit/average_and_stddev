@@ -20,6 +20,7 @@
 #include <cstdlib>
 #include <iomanip>
 #include <vector>
+#include <cmath>
 #include <boost/algorithm/string.hpp> 
 
 #define SEPARATORS       " \t"
@@ -57,7 +58,7 @@ int main(int argc, char*argv[]) {
   double stddev_tot = Calculate_stddev(doubled_file, col_number - 1, average_tot);
 
   std::cout << "Righe tot: " << doubled_file.size() << ", colonne tot: " << doubled_file.at(0).size() << std::endl;
-  std::cout << "Media tot: " << average_tot << ", dev.std. tot: " << stddev_tot << ", errore tot: " << stddev_tot / sqrt(doubled_file.size()) << std::endl;
+  std::cout << "Media tot: " << average_tot << ", dev.std. tot: " << stddev_tot << ", errore tot: " << stddev_tot / std::sqrt(doubled_file.size()) << std::endl;
 
   for (size_t i = 0; i < min_values.size(); i++) {
     std::cout << min_values[i] << ':' << max_values[i] << std::endl;
@@ -97,7 +98,7 @@ double Calculate_stddev(std::vector< std::vector<double> > doubled_file, int col
     stddev += (i[col_number] - average)*(i[col_number] - average);
   }
   stddev /= (double)(doubled_file.size() - 1.0);
-  stddev = sqrt(stddev);
+  stddev = std::sqrt(stddev);
   return stddev;
 }
 
