@@ -188,13 +188,18 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 
-*.exe
-cineca.gnu
-cineca.xl
-cnaf.debug.gnu
-cnaf.gnu
-cnaf.intel
+#CMake
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
 
+*.exe
 .vs/
 *.VC.db
 

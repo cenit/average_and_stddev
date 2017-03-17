@@ -22,6 +22,14 @@
 #include <vector>
 #include <cmath>
 #include <boost/algorithm/string.hpp> 
+#include <ave_stddev.h>
+
+#ifndef MAJOR_VERSION
+#define MAJOR_VERSION    1
+#endif
+#ifndef MINOR_VERSION
+#define MINOR_VERSION    0
+#endif
 
 #define SEPARATORS       " \t"
 #define COMMENTS         "#"
@@ -37,6 +45,7 @@ std::vector<std::vector<std::string>> Parse_file(std::string, std::string, std::
 
 
 int main(int argc, char*argv[]) {
+  std::cout << argv[0] << " v. " << MAJOR_VERSION << '.' << MINOR_VERSION << std::endl;
   std::string filename;
   int col_number, filter_col_number;
   std::vector<double> min_values, max_values;
