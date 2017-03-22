@@ -3,7 +3,7 @@ project (average_and_stddev)
 set (CMAKE_CXX_STANDARD 11)
 
 set (MAJOR_VERSION 1)
-set (MINOR_VERSION 1)
+set (MINOR_VERSION 2)
 
 add_definitions(-D_SCL_SECURE_NO_WARNINGS)
 find_package(Boost)
