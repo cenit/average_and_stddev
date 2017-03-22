@@ -8,5 +8,5 @@ install:
   - sudo apt-get install -qq g++-4.8 libboost-all-dev
   - export CXX="g++-4.8"
 script:
-  - mkdir build && cd build && cmake .. && make && make install
+  - mkdir build_gcc && cd build_gcc && cmake .. && cmake --build . && cd ..
 

@@ -203,4 +203,6 @@ build/
 *.exe
 .vs/
 *.VC.db
+build_vs/
+build_gcc/
 
