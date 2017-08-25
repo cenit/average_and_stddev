@@ -7,12 +7,12 @@ set (MINOR_VERSION 2)
 
 ### Set output directories on a per-configuration base
 # Single configuration
-set( CMAKE_RUNTIME_OUTPUT_DIRECTORY $ENV{HOME}/bin )
+set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin )
 # Multi configuration
 foreach( OUTPUTCONFIG ${CMAKE_CONFIGURATION_TYPES} )
     string( TOUPPER ${OUTPUTCONFIG} OUTPUTCONFIG )
     if( OUTPUTCONFIG STREQUAL "RELEASE" )
-    set( CMAKE_RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG} $ENV{HOME}/bin )
+    set( CMAKE_RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG} ${CMAKE_SOURCE_DIR}/bin )
     else()
     set( CMAKE_RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG} ${CMAKE_SOURCE_DIR}/bin/${OUTPUTCONFIG} )
     endif()
@@ -34,3 +34,5 @@ configure_file ("${CMAKE_SOURCE_DIR}/src/ave_stddev.h.in" "${PROJECT_BINARY_DIR}
 include_directories("${PROJECT_BINARY_DIR}")
 
 add_executable(ave_stddev src/ave_stddev.cpp)
+
+
